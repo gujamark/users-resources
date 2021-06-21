@@ -1,20 +1,24 @@
 {
   "env": {
     "browser": true,
-    "es2021": true,
-    "node": true,
-    "jest/globals": true
+    "es6": true,
+    "commonjs": true
   },
-  "extends": ["plugin:react/recommended", "airbnb", "prettier"],
   "parser": "babel-eslint",
+  "extends": [
+    "airbnb",
+    "prettier",
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
     },
-    "ecmaVersion": 12,
+    "ecmaVersion": 11,
     "sourceType": "module"
   },
-  "plugins": ["react", "prettier", "react-hooks", "jest"],
+  "plugins": ["react", "prettier"],
   "settings": {
     "react": {
       "version": "detect"
@@ -22,21 +26,16 @@
   },
   "rules": {
     "prettier/prettier": "error",
-    "no-console": "off",
-    "object-shorthand": "off",
-    "react/react-in-jsx-scope": "off",
     "no-unused-vars": "warn",
+    "no-console": "off",
+    "func-names": "off",
+    "no-process-exit": "off",
+    "object-shorthand": "off",
     "class-methods-use-this": "off",
+    "react/react-in-jsx-scope": "off",
     "arrow-spacing": "off",
-    "react/jsx-filename-extension": [
-      0,
-      {
-        "extensions": [".jsx", ".js"]
-      }
-    ],
-    "react/jsx-props-no-spreading": "off",
     "react/state-in-constructor": "off",
-    "react/prop-types": "off",
-    "jsx-a11y/label-has-associated-control": "off"
+    "no-undef": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".jsx", ".js"] }]
   }
 }
