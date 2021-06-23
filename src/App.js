@@ -1,10 +1,15 @@
 import './App.css';
 
 import Routes from './Routes';
-import {} from 'react-router-dom';
+import Navigation from './components/navigation';
 
 function App() {
-  return <Routes />;
+  return (
+    <>
+      <Navigation />
+      <Routes />
+    </>
+  );
 }
 
 export default App;
