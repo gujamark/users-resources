@@ -1,0 +1,20 @@
+.UserAvatar {
+  width: 300px;
+}
+
+.UserCard {
+  width: 300px;
+  margin: 10px;
+}
+
+.UserListWrapper {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  margin: auto;
+  justify-content: center;
+}
+
+.CardWrapper {
+  display: flex;
+  justify-content: center;
+}

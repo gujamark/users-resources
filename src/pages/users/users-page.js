@@ -1,5 +1,7 @@
+import UserList from '../../components/users';
+
 function UsersPage() {
-  return <h1>THIS IS USERS PAGE</h1>;
+  return <UserList />;
 }
 
 export default UsersPage;

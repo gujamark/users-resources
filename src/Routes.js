@@ -6,12 +6,15 @@ import * as routePath from './utils/routePaths';
 
 import UsersPage from './pages/users';
 import ResourcesPage from './pages/resources';
+import UserProvider from './contexts/UserProvider';
 
 function Routes() {
   return (
     <Switch>
       <Route path={routePath.USERS_PATH}>
-        <UsersPage />
+        <UserProvider>
+          <UsersPage />
+        </UserProvider>
       </Route>
       <Route path={routePath.RESOURCES_PATH}>
         <ResourcesPage />
