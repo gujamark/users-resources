@@ -2,12 +2,15 @@ import './App.css';
 
 import Routes from './Routes';
 import Navigation from './components/navigation';
+import ErrorBoundary from './components/error-boundary';
 
 function App() {
   return (
     <>
-      <Navigation />
-      <Routes />
+      <ErrorBoundary>
+        <Navigation />
+        <Routes />
+      </ErrorBoundary>
     </>
   );
 }

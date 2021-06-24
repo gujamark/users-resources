@@ -6,18 +6,23 @@ UserContext.displayName = 'UserContext';
 
 function UserProviderComponent({ children }) {
   const [userList, setUserList] = useState([]);
+  const [page, setPage] = useState(1);
 
   const loadUsers = async () => {
-    const users = await API_SERVICE.getUsers();
+    const users = await API_SERVICE.getUsers(page);
     setUserList(users);
   };
 
   useEffect(() => {
-    loadUsers();
-  }, []);
+    loadUsers(page);
+  }, [page]);
+
+  function updatePage(newPage) {
+    setPage(newPage);
+  }
 
   return (
-    <UserContext.Provider value={{ userList, setUserList }}>
+    <UserContext.Provider value={{ userList, setUserList, page, updatePage }}>
       {children}
     </UserContext.Provider>
   );

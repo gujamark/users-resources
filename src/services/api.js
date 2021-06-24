@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 export default class API_SERVICE {
-  static async getUsers() {
-    const url = `${process.env.REACT_APP_REQRES_API}/users`;
+  static async getUsers(page) {
+    const url = `${process.env.REACT_APP_REQRES_API}/users?page=${page}`;
     try {
       const response = await axios.get(url);
       return response.data;

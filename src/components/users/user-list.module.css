@@ -18,3 +18,15 @@
   display: flex;
   justify-content: center;
 }
+
+.ButtonsWrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ButtonsWrapper button {
+  min-width: 100px;
+  margin: 10px;
+}

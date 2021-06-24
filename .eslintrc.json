@@ -37,6 +37,7 @@
     "react/state-in-constructor": "off",
     "no-undef": "off",
     "react/jsx-filename-extension": [1, { "extensions": [".jsx", ".js"] }],
-    "react/prop-types": "off"
+    "react/prop-types": "off",
+    "react/forbid-prop-types": "off"
   }
 }

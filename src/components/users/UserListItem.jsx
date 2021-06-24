@@ -1,4 +1,5 @@
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
 import styles from './user-list.module.css';
 
 function UserListItem({ user }) {
@@ -13,7 +14,6 @@ function UserListItem({ user }) {
         <div className="card-body">
           <h5 className="card-title">{`${user.first_name} ${user.last_name}`}</h5>
           <p className="card-text">{user.email}</p>
-          {/* <a href="#" className="btn btn-primary">Go somewhere</a> */}
         </div>
       </div>
     </div>
@@ -21,3 +21,7 @@ function UserListItem({ user }) {
 }
 
 export default UserListItem;
+
+UserListItem.propTypes = {
+  user: PropTypes.object.isRequired,
+};
