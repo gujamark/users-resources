@@ -1,14 +1,17 @@
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
 import { useHistory } from 'react-router';
+import { useDispatch } from 'react-redux';
 import styles from './sign-in.module.css';
 import API_SERVICE from '../../../services/api';
 import { AUTH_TOKEN } from '../../../utils/constants';
 import withNoAuth from '../../../hoc/withNoAuth';
+import { setAuthUserAction } from '../../../redux/actions';
 
 function SignInForm() {
   const [loginSuccess, setloginSuccess] = useState();
   const history = useHistory();
+  const dispatch = useDispatch();
 
   const {
     register,
@@ -22,6 +25,7 @@ function SignInForm() {
       setloginSuccess(loginResponse.error);
     } else {
       localStorage.setItem(AUTH_TOKEN, JSON.stringify(loginResponse.token));
+      dispatch(setAuthUserAction(true));
       history.replace('/');
     }
   };
