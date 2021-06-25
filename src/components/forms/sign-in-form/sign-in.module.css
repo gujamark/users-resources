@@ -1,0 +1,15 @@
+.FormWrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.FormWrapper input {
+  min-width: 300px;
+}
+
+.FormWrapper alert {
+  max-width: 300px;
+}

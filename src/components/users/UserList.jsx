@@ -40,7 +40,8 @@ function UserList() {
       </div>
     );
   }
-  return <h1>Hello</h1>;
+
+  return <h1>Loading Users...</h1>;
 }
 
 export default UserList;

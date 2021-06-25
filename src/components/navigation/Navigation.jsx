@@ -2,6 +2,7 @@ import { NavLink } from 'react-router-dom';
 import classNames from 'classnames';
 import * as routes from '../../utils/routePaths';
 import styles from './navigation.module.css';
+import AuthButtons from '../auth-buttons';
 
 function Navigation() {
   return (
@@ -10,7 +11,6 @@ function Navigation() {
         'navbar navbar-expand-lg navbar-light bg-light',
         styles.NavbarCustom,
       )}>
-      {/* <div className="collapse navbar-collapse" id="navbarText"> */}
       <ul className="nav nav-pills">
         <li className="nav-item">
           <NavLink
@@ -29,7 +29,9 @@ function Navigation() {
           </NavLink>
         </li>
       </ul>
-      {/* </div> */}
+      <span className="navbar-text">
+        <AuthButtons />
+      </span>
     </nav>
   );
 }

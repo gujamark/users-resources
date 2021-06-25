@@ -13,7 +13,7 @@ function UserListItem({ user }) {
         />
         <div className="card-body">
           <h5 className="card-title">{`${user.first_name} ${user.last_name}`}</h5>
-          <p className="card-text">{user.email}</p>
+          <a href={`mailto:${user.email}`}>{user.email}</a>
         </div>
       </div>
     </div>
